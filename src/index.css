@@ -3,10 +3,18 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --yellow: #FFC600;
+  --black: #202020;
+  --white: #FDF8E1;
+  --green: #66B752;
+  --red: #C13030;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
 }

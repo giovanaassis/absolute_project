@@ -1,0 +1,37 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin: 10rem auto;
+}
+
+.home img {
+    width: 100px;
+}
+
+.title {
+    color: var(--yellow);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-style: italic;
+    letter-spacing: 7px;
+}
+
+.buttons_container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn1 {
+    background-color: var(--white);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+
+.btn2 {
+    background-color: var(--yellow);
+    color: var(--white);
+    border: 0;
+}
