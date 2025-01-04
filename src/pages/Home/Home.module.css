@@ -21,7 +21,15 @@
 
 .buttons_container {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons_container div {
+    display: flex;
+    gap: 24px;
 }
 
 .btn1 {
@@ -33,5 +41,5 @@
 .btn2 {
     background-color: var(--yellow);
     color: var(--white);
-    border: 0;
+    border: 2px solid transparent;
 }
