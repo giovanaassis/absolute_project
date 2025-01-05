@@ -12,7 +12,9 @@ function Home() {
                     <Link to='/tutorial'>
                         <button className={styles.btn1}>TUTORIAL</button>
                     </Link>
-                    <button className={styles.btn1}>AS NOTAS</button>
+                    <Link to='/key_notes'>
+                        <button className={styles.btn1}>AS NOTAS</button>
+                    </Link>
                 </div>
                 <div>
                     <button className={styles.btn2}>JOGAR</button>

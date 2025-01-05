@@ -1,0 +1,13 @@
+.key_notes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.key_notes p {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 10rem;
+}
