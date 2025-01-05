@@ -25,3 +25,7 @@
 .game p {
     font-weight: 600;
 }
+
+.gameOver {
+    opacity: 0.4;
+}

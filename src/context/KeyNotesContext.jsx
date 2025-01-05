@@ -12,6 +12,11 @@ export const KeyNotesProvider = ({ children }) => {
     // the game states = normal, playing, win, lose
     const [ count, setCount ] = useState(0) // contagem de vezes que o usuário pode repetir a nota
 
+    
+    const handleCount = () => {
+        setCount(prev => prev + 1);
+    }
+
     const playRandomNote = () => {
         if (gameState === 'Normal'){
             // gerando uma nota aleatória
@@ -20,14 +25,14 @@ export const KeyNotesProvider = ({ children }) => {
             // armazenando a nota
             setCurrentKey(key.audio)
 
-            setCount(prev => prev + 1)
+            handleCount();
             setGameState('Playing')
             return;
         }
 
         if (gameState === 'Playing' && count < 3) {
             new Audio(currentKey).play();
-            setCount(prev => prev + 1)
+            handleCount();
         }
     }
 
@@ -58,13 +63,15 @@ export const KeyNotesProvider = ({ children }) => {
         new Audio(currentKey).play();
     }, [currentKey])
 
+
     return (
         <KeyNotesContext.Provider value={ { 
             playRandomNote, 
             playKey, 
             checkAnswer, 
             gameState, 
-            resetGame 
+            resetGame,
+            count 
             } }>
             { children }
         </KeyNotesContext.Provider>
