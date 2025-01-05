@@ -7,7 +7,7 @@ function KeyNotes() {
         <div className={styles.key_notes}>
             <GoBackButton page='/' />
             <p>Clique nas notas para escutar seu som:</p>
-            <TheKeys />
+            <TheKeys gameOn={false} />
         </div>
     )
 }

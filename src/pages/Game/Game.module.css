@@ -1,0 +1,27 @@
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 10rem;
+}
+
+.game button {
+    background-color: var(--black);
+    color: var(--yellow);
+    border: 0;
+}
+
+.game .reset_icon {
+    position: absolute;
+    top: 242px;
+    right: 490px;
+    color: var(--yellow);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.game p {
+    font-weight: 600;
+}

@@ -17,7 +17,9 @@ function Home() {
                     </Link>
                 </div>
                 <div>
-                    <button className={styles.btn2}>JOGAR</button>
+                    <Link to='/game'>
+                        <button className={styles.btn2}>JOGAR</button>
+                    </Link>
                 </div>
             </div>
         </main>

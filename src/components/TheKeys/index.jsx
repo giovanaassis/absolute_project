@@ -1,66 +1,53 @@
+/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import styles from "./TheKeys.module.css";
-import DO from "../../assets/do.mp3";
-import RE from "../../assets/re.mp3";
-import MI from "../../assets/mi.mp3";
-import FA from "../../assets/fa.mp3";
-import SOL from "../../assets/sol.mp3";
-import LA from "../../assets/la.mp3";
-import TI from "../../assets/ti.mp3";
+import { KeyNotesContext } from "../../context/KeyNotesContext";
 
-const soundKeys = [
-    {
-        keyName: 'DÓ',
-        audio: DO
-    }
-]
+const TheKeys = ({ gameOn }) => {
 
-const TheKeys = () => {
-
-    const playKey = (key) => {
-        new Audio(key).play();
-    }
+    const { playKey, checkAnswer } = useContext(KeyNotesContext);
 
     return (
         <div className={styles.keys_container}>
-            <span 
+            <span
             className={styles.keys} 
-            onClick={() => playKey(DO)}>
+            onClick={() => gameOn ? checkAnswer('DÓ') : playKey('DÓ')}>
                 DÓ
             </span>
 
             <span 
             className={styles.keys}
-            onClick={() => playKey(RE)}>
+            onClick={() => gameOn ? checkAnswer('RÉ') : playKey('RÉ')}>
                 RÉ
             </span>
 
             <span 
             className={styles.keys} 
-            onClick={() => playKey(MI)}>
+            onClick={() => gameOn ? checkAnswer('MI') : playKey('MI')}>
                 MI
             </span>
 
             <span 
             className={styles.keys} 
-            onClick={() => playKey(FA)}>
+            onClick={() => gameOn ? checkAnswer('FA') : playKey('FA')}>
                 FA
             </span>
 
             <span 
             className={styles.keys} 
-            onClick={() => playKey(SOL)}>
+            onClick={() => gameOn ? checkAnswer('SOL') : playKey('SOL')}>
                 SOL
             </span>
 
             <span 
             className={styles.keys} 
-            onClick={() => playKey(LA)}>
+            onClick={() => gameOn ? checkAnswer('LA') : playKey('LA')}>
                 LA
             </span>
 
             <span 
             className={styles.keys} 
-            onClick={() => playKey(TI)}>
+            onClick={() => gameOn ? checkAnswer('SÍ') : playKey('SÍ')}>
                 SÍ
             </span>
         </div>
