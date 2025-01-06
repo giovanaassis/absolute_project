@@ -1,6 +1,9 @@
 .keys_container {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .keys {
@@ -21,4 +24,17 @@
 
 .keys:hover {
     transform: scale(1.1);
+}
+
+
+/* tablets e celulares */
+@media screen and (max-width: 800px) {
+    .keys_container {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .keys:hover {
+        transform: none;
+    }
 }

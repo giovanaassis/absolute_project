@@ -8,3 +8,12 @@
     top: 10px;
     left: 150px;
 }
+
+
+/* tablets e celulares */
+@media screen and (max-width: 800px) {
+    .btn {
+        top: 30px;
+        left: 20px;
+    }
+}

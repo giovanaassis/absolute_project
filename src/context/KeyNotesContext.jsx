@@ -9,7 +9,7 @@ export const KeyNotesProvider = ({ children }) => {
     const [ currentKey, setCurrentKey ] = useState();
     const [ randomKey, setRandomKey ] = useState();
     const [ gameState, setGameState ] = useState('Normal');
-    // the game states = normal, playing, win, lose
+    // os game states = normal, playing, win, lose
     const [ count, setCount ] = useState(0) // contagem de vezes que o usuário pode repetir a nota
 
     
@@ -24,7 +24,7 @@ export const KeyNotesProvider = ({ children }) => {
             setRandomKey(key.keyName);
             // armazenando a nota
             setCurrentKey(key.audio)
-
+            
             handleCount();
             setGameState('Playing')
             return;
@@ -33,6 +33,7 @@ export const KeyNotesProvider = ({ children }) => {
         if (gameState === 'Playing' && count < 3) {
             new Audio(currentKey).play();
             handleCount();
+            console.log('random note');
         }
     }
 
@@ -43,11 +44,9 @@ export const KeyNotesProvider = ({ children }) => {
 
     const checkAnswer = (answer) => {
         if(randomKey) {
-            if(randomKey === answer) {
-                setGameState('Win')
-            } else {
-                setGameState('Lose')
-            }
+            randomKey === answer ? setGameState('Win') : setGameState('Lose');
+            setCount(3);
+
         } else { // se o usuário não tiver apertado o botão
             alert('Aperte o botão TOCAR primeiro.')
         }
@@ -56,6 +55,7 @@ export const KeyNotesProvider = ({ children }) => {
     const resetGame = () => {
         setGameState('Normal');
         setCount(0);
+        setRandomKey('');
         playRandomNote();
     }
 

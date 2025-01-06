@@ -28,9 +28,22 @@
 
 .icons {
     font-size: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .linkedin_icon {
     color: rgb(0, 122, 185);
     margin-right: 10px;
+}
+
+.github_icon {
+    color: #1F1D1D;
+}
+
+
+/* tablets e celulares */
+@media screen and (max-width: 800px) {
+    .tutorial p {
+        width: 90%;
+    }
 }

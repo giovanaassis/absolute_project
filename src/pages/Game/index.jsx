@@ -18,7 +18,7 @@ function Game() {
             <div>
                 <SoundWave active={waveState}/> { /* estilização para as ondas sonoras */ }
             </div>
-            <div>
+            <div className={styles.buttons}>
                 <button onClick={() => { playRandomNote(); activeWave() }}
                     className={`${count === 3 && styles.gameOver}`}
                     >TOCAR

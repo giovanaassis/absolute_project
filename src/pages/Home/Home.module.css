@@ -43,3 +43,20 @@
     color: var(--white);
     border: 2px solid transparent;
 }
+
+.btn1:hover,
+.btn2:hover {
+    opacity: 0.5;
+}
+
+
+@media screen and (max-width: 600px) {
+    .buttons_container div {
+        flex-direction: column;
+    }
+
+    .btn1:hover,
+    .btn2:hover {
+        opacity: 1;
+    }
+}

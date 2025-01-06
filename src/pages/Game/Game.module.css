@@ -13,12 +13,15 @@
     border: 0;
 }
 
+.game .buttons {
+    position: relative;
+}
+
 .game .reset_icon {
     position: absolute;
-    top: 242px;
-    right: 490px;
     color: var(--yellow);
     font-size: 3rem;
+    margin-left: 1rem;
     cursor: pointer;
 }
 

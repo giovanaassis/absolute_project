@@ -22,8 +22,12 @@ function Tutorial() {
             <footer className={styles.footer}>
                 <p>Desenvolvido por Giovana de Assis</p>
                 <i className={styles.icons}>
-                    <FaLinkedin className={styles.linkedin_icon} />
-                    <FaGithub />
+                    <a href="https://www.linkedin.com/in/giovanadeassis" target="_blank">
+                        <FaLinkedin className={styles.linkedin_icon} />
+                    </a>
+                    <a href="https://github.com/giovanaassis" target="_blank">
+                        <FaGithub className={styles.github_icon} />
+                    </a>
                 </i>
             </footer>
         </div>
