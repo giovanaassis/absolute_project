@@ -1,6 +1,6 @@
-# Título do Projeto: Absolute
+# Absolute
 
-Descrição:
-Este é um projeto interativo para treinar e aprimorar seu ouvido musical. Serve como um exercício prático para identificar notas musicais.
+<img src="" alt="Exemplo imagem">
 
-Status do projeto: Em desenvolvimento.
+> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+
