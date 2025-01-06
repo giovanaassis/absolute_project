@@ -1,6 +1,6 @@
 # Absolute
 
-<img src="" alt="Exemplo imagem">
+<img src="/absolute_print.png" alt="Print do projeto">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+> Um projeto simples e divertido para ajudar a treinar e desenvolver seu ouvido absoluto! Ele reproduz uma nota musical aleatória, e o usuário deve adivinhar qual é. Ideal para músicos e entusiastas que desejam aprimorar sua percepção musical.
 
