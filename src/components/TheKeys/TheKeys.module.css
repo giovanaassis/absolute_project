@@ -32,6 +32,7 @@
     .keys_container {
         width: 80%;
         margin-bottom: 2rem;
+        user-select: none;
     }
 
     .keys:hover {
