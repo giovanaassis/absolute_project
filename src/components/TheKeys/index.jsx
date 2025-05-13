@@ -8,7 +8,7 @@ const TheKeys = ({ gameOn }) => {
     const { playKey, checkAnswer } = useContext(KeyNotesContext);
 
     return (
-        <div className={styles.keys_container}>
+        <div className={styles.keys_container} data-testid="keys">
             <span
             className={styles.keys} 
             onClick={() => gameOn ? checkAnswer('DÓ') : playKey('DÓ')}>

@@ -16,5 +16,6 @@ describe("KeyNotes Page", () => {
     expect(
       screen.getByText("Clique nas notas para escutar seu som:")
     ).toBeInTheDocument();
+    expect(screen.getByTestId("keys")).toBeInTheDocument();
   });
 });
