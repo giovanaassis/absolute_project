@@ -8,7 +8,7 @@ import KeyNotes from "../../src/pages/KeyNotes";
 import Game from "../../src/pages/Game";
 import { renderWithProviders } from "../utils/renderWithProviders";
 
-describe("Home Component", () => {
+describe("Home Page", () => {
   it("should render correctly", () => {
     render(
       <MemoryRouter>

@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 import Tutorial from "../../src/pages/Tutorial";
 import { MemoryRouter } from "react-router-dom";
 
-describe("Tutorial Component", () => {
+describe("Tutorial Page", () => {
   it("should render correctly", () => {
     render(
       <MemoryRouter>
