@@ -1,5 +1,5 @@
 import { screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import Game from "../../src/pages/Game";
 import { renderWithProviders } from "../utils/renderWithProviders";
 import { Route, Routes } from "react-router-dom";
@@ -17,6 +17,28 @@ describe("Game Page", () => {
     expect(screen.getByText(/tocar/i)).toBeInTheDocument();
     expect(screen.getByTestId("soundWave")).toBeInTheDocument();
     expect(screen.getByTestId("keys")).toBeInTheDocument();
+  });
+
+  it("should call playRandomNote and activeWave when button is clicked", async () => {
+    const user = userEvent.setup();
+    const playRandomNote = vi.fn();
+    const activeWave = vi.fn();
+
+    renderWithProviders(
+      <Routes>
+        <Route path="/game" element={<Game />} />
+      </Routes>,
+      "/game",
+      { playRandomNote},
+      { activeWave }
+    );
+
+    const playButton = screen.getByText(/tocar/i);
+
+    await user.click(playButton);
+
+    expect(playRandomNote).toHaveBeenCalled();
+    expect(activeWave).toHaveBeenCalled();
   });
 
   it("should render a win message", async () => {
@@ -37,7 +59,9 @@ describe("Game Page", () => {
     await user.click(key);
 
     expect(await screen.findByText(/acertou/i)).toBeInTheDocument();
-    expect(await screen.findByLabelText("arrowCounterIcon")).toBeInTheDocument();
+    expect(
+      await screen.findByLabelText("arrowCounterIcon")
+    ).toBeInTheDocument();
   });
 
   it("should render a lose message", async () => {
@@ -58,6 +82,8 @@ describe("Game Page", () => {
     await user.click(key);
 
     expect(await screen.findByText(/errou/i)).toBeInTheDocument();
-    expect(await screen.findByLabelText("arrowCounterIcon")).toBeInTheDocument();
+    expect(
+      await screen.findByLabelText("arrowCounterIcon")
+    ).toBeInTheDocument();
   });
 });
