@@ -29,7 +29,7 @@ describe("Game Page", () => {
         <Route path="/game" element={<Game />} />
       </Routes>,
       "/game",
-      { playRandomNote},
+      { playRandomNote },
       { activeWave }
     );
 
