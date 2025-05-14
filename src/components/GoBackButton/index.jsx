@@ -7,7 +7,7 @@ const GoBackButton = ({ page }) => {
 
     return (
         <Link to={page} >
-            <FaArrowLeft className={styles.btn}/>
+            <FaArrowLeft className={styles.btn} aria-label="arrowLeftIcon"/>
         </Link>
     )
 }
